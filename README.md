@@ -145,7 +145,7 @@ Options:
   --skip-prompt                     Skip prompt (deprecated, use --no-interaction)
   --no-interaction, --ni            Non-interactive mode, skip all prompts
   --yes, -y                         Use defaults and skip confirmations when applicable
-  --vars <pairs...>                 Variables in key=value format (can be used multiple times)
+  --vars <pairs...>                 Variables in key=value format, supports nested keys and arrays (can be used multiple times)
   --vars-file <path>                Path to variables file (non-JSON, supports includes)
   --strict                          Strict mode: treat duplicate keys and type conflicts as errors
   --rm <files...>                   Remove files/folders after project creation
