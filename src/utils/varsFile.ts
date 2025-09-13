@@ -114,9 +114,30 @@ function parseVarsFileRecursive(
   // 移除包含堆疊
   includeStack.pop();
 
-  // 解析收集到的變數
+  // 解析收集到的變數，需要處理相對路徑的上下文
   if (varsArray.length > 0) {
-    const parseResult = parseVars(varsArray, strict);
+    // 預處理 @file 路徑，將相對路徑轉換為絕對路徑
+    const processedVarsArray = varsArray.map((varLine) => {
+      const equalIndex = varLine.indexOf('=');
+      if (equalIndex === -1) return varLine;
+
+      const key = varLine.substring(0, equalIndex).trim();
+      let value = varLine.substring(equalIndex + 1);
+
+      // 處理 @file 相對路徑
+      if (value.startsWith('@') && !value.startsWith('@/')) {
+        const filePath = value.substring(1);
+        if (!filePath.startsWith('/')) {
+          // 相對路徑，轉換為基於當前 vars 檔案目錄的絕對路徑
+          const absolutePath = resolve(dirname(resolvedPath), filePath);
+          value = '@' + absolutePath;
+        }
+      }
+
+      return key + '=' + value;
+    });
+
+    const parseResult = parseVars(processedVarsArray, strict);
     Object.assign(vars, parseResult.vars);
     errors.push(...parseResult.errors);
   }
