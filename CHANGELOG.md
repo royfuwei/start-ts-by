@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/royfuwei/start-ts-by/compare/v0.0.19...v0.1.0) (2025-12-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* **config:** Remove npm scripts: release:patch, release:minor, release:major
+
+### chore
+
+* **config:** improve development workflow and TypeScript configuration ([f17f8a3](https://github.com/royfuwei/start-ts-by/commit/f17f8a327380f8730721b80f8bcf04fe8def25b0))
+
 ### [0.0.19](https://github.com/royfuwei/start-ts-by/compare/v0.0.18...v0.0.19) (2025-09-13)
 
 
