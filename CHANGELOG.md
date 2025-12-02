@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/royfuwei/start-ts-by/compare/v0.1.0...v0.1.1) (2025-12-02)
+
+
+### Features
+
+* implement --monorepo flag for monorepo subprojects ([1d07e8b](https://github.com/royfuwei/start-ts-by/commit/1d07e8bb79e03d105b579566dd63b245befb1e1b))
+* **openspec:** add monorepo flag proposal and specs ([9ec0ff5](https://github.com/royfuwei/start-ts-by/commit/9ec0ff53fa3ee2c145aa12f54200ed0ab2f3c5ab))
+
+## [0.1.0](https://github.com/royfuwei/start-ts-by/compare/v0.0.19...v0.1.0) (2025-12-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* **config:** Remove npm scripts: release:patch, release:minor, release:major
+
+### chore
+
+* **config:** improve development workflow and TypeScript configuration ([f17f8a3](https://github.com/royfuwei/start-ts-by/commit/f17f8a327380f8730721b80f8bcf04fe8def25b0))
+
+### [0.0.19](https://github.com/royfuwei/start-ts-by/compare/v0.0.18...v0.0.19) (2025-09-13)
+
+
+### Features
+
+* add non-interactive mode with --no-interaction flag ([d5cf291](https://github.com/royfuwei/start-ts-by/commit/d5cf291850c3a614aab9f1177f14595de65c6439))
+* add type definitions for variable system ([cfc91c2](https://github.com/royfuwei/start-ts-by/commit/cfc91c2a21555155b45741d6f78de14d76c0a28c))
+* add variable parsing utilities ([4f4a89e](https://github.com/royfuwei/start-ts-by/commit/4f4a89e2c862b6eb86a79883c4ddb48f5fa258b6))
+
+
+### Bug Fixes
+
+* resolve [@file](https://github.com/file) relative path resolution in varsFile ([82132b2](https://github.com/royfuwei/start-ts-by/commit/82132b20f854b0bcdef7bc098606b6e7b11d5d38))
+
 ### [0.0.18](https://github.com/royfuwei/start-ts-by/compare/v0.0.17...v0.0.18) (2025-06-19)
 
 
