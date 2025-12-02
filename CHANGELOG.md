@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/royfuwei/start-ts-by/compare/v0.1.0...v0.1.1) (2025-12-02)
+
+
+### Features
+
+* implement --monorepo flag for monorepo subprojects ([1d07e8b](https://github.com/royfuwei/start-ts-by/commit/1d07e8bb79e03d105b579566dd63b245befb1e1b))
+* **openspec:** add monorepo flag proposal and specs ([9ec0ff5](https://github.com/royfuwei/start-ts-by/commit/9ec0ff53fa3ee2c145aa12f54200ed0ab2f3c5ab))
+
 ## [0.1.0](https://github.com/royfuwei/start-ts-by/compare/v0.0.19...v0.1.0) (2025-12-01)
 
 
