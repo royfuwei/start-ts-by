@@ -1,5 +1,5 @@
 ---
-"start-ts-by": major
+"start-ts-by": minor
 ---
 
 BREAKING CHANGE: Migrate version management from standard-version to Changesets
