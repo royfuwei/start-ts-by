@@ -200,6 +200,10 @@ When running `npx start-ts-by create my-project`:
 
 For detailed instructions, see [Registry Guide](./registry.md) | [zh-TW](./registry.zh-TW.md).
 
+### Official Template Collection
+
+Visit [start-ts-templates](https://github.com/royfuwei/start-ts-templates) repository for official template collection and registry configuration.
+
 ---
 
 ## 📝 Supported Template Sources & Syntax

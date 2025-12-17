@@ -201,6 +201,15 @@ When running `npx start-ts-by create my-project`:
 
 For detailed instructions, see [Registry Guide](./docs/registry.md) | [zh-TW](./docs/registry.zh-TW.md).
 
+### Official Template Collection
+
+The official template collection is maintained at [royfuwei/start-ts-templates](https://github.com/royfuwei/start-ts-templates):
+
+- 📦 **Repository**: [github.com/royfuwei/start-ts-templates](https://github.com/royfuwei/start-ts-templates)
+- 📋 **Registry**: Automatically configured with `registry-config.json`
+- 🎯 **Templates**: TypeScript app/lib templates with modern tooling (tsdown, vitest, etc.)
+- 📖 **Usage**: Templates are available in interactive mode or via `--list` command
+
 ---
 
 ## 📝 Supported Template Sources & Syntax

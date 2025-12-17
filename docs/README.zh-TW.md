@@ -200,6 +200,10 @@ npx start-ts-by --list-verbose
 
 詳細說明請參考 [Registry 使用指南](./registry.zh-TW.md)。
 
+### 官方 Template 集合
+
+請造訪 [start-ts-templates](https://github.com/royfuwei/start-ts-templates) repository 取得官方 template 集合與 registry 設定檔。
+
 ---
 
 ## 📝 支援的模板來源與語法
