@@ -114,6 +114,90 @@ npx start-ts-by my-app -t git@your.gitlab:group/repo.git#v2/templates --ni
 npx start-ts-by my-app -t ./my-template-folder/subdir --ni
 ```
 
+### List Available Templates
+
+```sh
+# List all available templates (human-readable format)
+npx start-ts-by --list
+npx start-ts-by -l
+
+# List templates in JSON format (for programmatic use)
+npx start-ts-by --list-json
+
+# List templates with descriptions (verbose mode)
+npx start-ts-by --list-verbose
+```
+
+**Example Output:**
+
+```
+📦 Available Templates:
+
+📌 Built-in Templates (builtin)
+  ├─ TypeScript Library
+  ├─ TypeScript Application
+  └─ Monorepo Template
+
+🌐 start-ts-templates (registry)
+  ├─ App (tsdown)
+  └─ Library
+
+✨ Total 5 templates from 2 sources
+```
+
+---
+
+## 🌐 Registry Support
+
+`start-ts-by` supports loading templates from external registries, allowing you to use community-provided template collections.
+
+### Setting Up Registry
+
+Create a `registry-config.json` file:
+
+```json
+{
+  "registries": [
+    {
+      "name": "start-ts-templates",
+      "url": "https://raw.githubusercontent.com/royfuwei/start-ts-templates/main/registry.json",
+      "enabled": true
+    }
+  ],
+  "cacheDir": ".cache/registries",
+  "cacheTTL": 3600000
+}
+```
+
+### Registry.json Format
+
+External registries should provide a JSON file in the following format:
+
+```json
+{
+  "repo": "your-org/your-templates-repo",
+  "defaultRef": "main",
+  "templates": [
+    {
+      "id": "template-id",
+      "path": "templates/template-path",
+      "title": "Template Display Name",
+      "description": "Optional description"
+    }
+  ]
+}
+```
+
+### Using Registry Templates
+
+When running `npx start-ts-by create my-project`:
+
+1. Select template source (Built-in / Registry / Manual input)
+2. If you choose Registry, select a specific template
+3. Or use `--list` to view all available templates
+
+For detailed instructions, see [Registry Guide](./registry.md) | [zh-TW](./registry.zh-TW.md).
+
 ---
 
 ## 📝 Supported Template Sources & Syntax
@@ -159,6 +243,9 @@ Start TypeScript project by git repo or local folder templates
 
 Options:
   -V, --version                     output the version number
+  -l, --list                        List all available templates
+  --list-json                       List all available templates in JSON format
+  --list-verbose                    List all available templates with descriptions
   -h, --help                        display help for command
 
 Commands:

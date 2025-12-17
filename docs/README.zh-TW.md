@@ -114,6 +114,90 @@ npx start-ts-by my-app -t git@your.gitlab:group/repo.git#v2/templates --ni
 npx start-ts-by my-app -t ./my-template-folder/subdir --ni
 ```
 
+### 列出可用的 Templates
+
+```sh
+# 列出所有可用 templates（易讀格式）
+npx start-ts-by --list
+npx start-ts-by -l
+
+# 以 JSON 格式列出 templates（適合程式化使用）
+npx start-ts-by --list-json
+
+# 列出 templates 並包含描述（詳細模式）
+npx start-ts-by --list-verbose
+```
+
+**範例輸出：**
+
+```
+📦 可用的 Templates:
+
+📌 內建 Templates (builtin)
+  ├─ TypeScript Library
+  ├─ TypeScript Application
+  └─ Monorepo Template
+
+🌐 start-ts-templates (registry)
+  ├─ App (tsdown)
+  └─ Library
+
+✨ 共 5 個 templates 來自 2 個來源
+```
+
+---
+
+## 🌐 Registry 支援
+
+`start-ts-by` 支援從外部 registry 載入 templates，讓你可以使用社群提供的 template 集合。
+
+### 設定 Registry
+
+建立 `registry-config.json` 檔案：
+
+```json
+{
+  "registries": [
+    {
+      "name": "start-ts-templates",
+      "url": "https://raw.githubusercontent.com/royfuwei/start-ts-templates/main/registry.json",
+      "enabled": true
+    }
+  ],
+  "cacheDir": ".cache/registries",
+  "cacheTTL": 3600000
+}
+```
+
+### Registry.json 格式
+
+外部 registry 應提供以下格式的 JSON 檔案：
+
+```json
+{
+  "repo": "your-org/your-templates-repo",
+  "defaultRef": "main",
+  "templates": [
+    {
+      "id": "template-id",
+      "path": "templates/template-path",
+      "title": "Template Display Name",
+      "description": "Optional description"
+    }
+  ]
+}
+```
+
+### 使用 Registry Templates
+
+執行 `npx start-ts-by create my-project` 時：
+
+1. 選擇 template 來源（內建 / Registry / 手動輸入）
+2. 如果選擇 Registry，再選擇具體的 template
+3. 或使用 `--list` 查看所有可用的 templates
+
+詳細說明請參考 [Registry 使用指南](./registry.zh-TW.md)。
+
 ---
 
 ## 📝 支援的模板來源與語法
@@ -155,6 +239,9 @@ Start TypeScript project by git repo or local folder templates
 
 Options:
   -V, --version                     顯示版本號
+  -l, --list                        列出所有可用 templates
+  --list-json                       以 JSON 格式列出所有可用 templates
+  --list-verbose                    列出所有可用 templates 並包含描述
   -h, --help                        顯示說明
 
 Commands:
