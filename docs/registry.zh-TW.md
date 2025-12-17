@@ -198,4 +198,3 @@ A: 不會，即使 registry 載入失敗，你仍然可以使用內建 templates
 
 - [README - Registry 支援](../README.md#-registry-support)
 - [範例 Registry Config](../registry-config.example.json)
-- [技術設計文件](./specs/20251216-TASK-START_TS_BY_003-registry-json-support/technical-design.md)
